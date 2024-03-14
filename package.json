@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "npx nodemon builder/index.js",
-    "t":"tsc builder/index.ts"
+    "t":"tsc --project ."
   },
   "author": "",
   "license": "ISC",
