@@ -1,0 +1,19 @@
+{
+  "name": "designpattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "npx nodemon builder/index.js",
+    "t":"tsc builder/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
