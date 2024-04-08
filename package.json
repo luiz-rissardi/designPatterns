@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "npx nodemon builder/index.js",
+    "s": "nodemon ./dist/strategy/index.js",
     "t":"tsc --project ."
   },
   "author": "",

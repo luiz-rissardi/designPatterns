@@ -45,3 +45,4 @@ const tshirt = new Tshirt()
     .build();
 const withStamp = new TshirtWithStamp(tshirt).addStamp().build();
 console.log(withStamp);
+export {};
