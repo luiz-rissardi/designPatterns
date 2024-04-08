@@ -1,4 +1,4 @@
-import { DiscountPerHundrentPrice } from "./strategies.js";
+import { DisocuntPerWeekend } from "./strategies.js";
 class ShoopingCart {
     constructor(DiscountStrategy) {
         this.products = new Map();
@@ -26,7 +26,7 @@ class ShoopingCart {
 // uma para descontar 2% da evnda acada 100 de preço, ou seja 200 == 4% de desconto
 // outro para descontar os mesmos 2% porem caso o total for acima de 100, mas somente 2% bruto sem 
 // acada 100 de preço 
-const discountStrategy = new DiscountPerHundrentPrice(0.2); // 20%
+const discountStrategy = new DisocuntPerWeekend(0.1); // 20%
 const shoppingCart = new ShoopingCart(discountStrategy);
 const product = {
     productName: "pipoca",

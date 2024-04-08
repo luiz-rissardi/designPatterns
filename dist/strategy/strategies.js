@@ -21,3 +21,11 @@ export class DiscountPer100Quantity {
         return totaAmmount;
     }
 }
+export class DisocuntPerWeekend {
+    constructor(percentOfDisocunt) {
+        this.percentOfDiscount = percentOfDisocunt;
+    }
+    execDiscount(totaAmmount) {
+        return totaAmmount - (totaAmmount * this.percentOfDiscount);
+    }
+}

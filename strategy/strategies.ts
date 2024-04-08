@@ -1,17 +1,11 @@
 
 export interface DiscountStrategy {
+    percentOfDiscount: number;
     execDiscount(totaAmmount: number): number;
 }
 
-export interface DiscountPerQuantity extends DiscountStrategy {
-    percentOfDiscount: number;
-}
 
-export interface DiscountPerPrice extends DiscountStrategy {
-    percentOfDiscount: number;
-}
-
-export class DiscountPerHundrentPrice implements DiscountPerPrice {
+export class DiscountPerHundrentPrice implements DiscountStrategy {
     percentOfDiscount: number;
 
     constructor(percentOfDiscountPerHundrend: number) {
@@ -29,7 +23,7 @@ export class DiscountPerHundrentPrice implements DiscountPerPrice {
 
 }
 
-export class DiscountPer100Quantity implements DiscountPerQuantity {
+export class DiscountPer100Quantity implements DiscountStrategy {
     percentOfDiscount: number;
 
     constructor(percentOfDiscount: number) {
@@ -41,5 +35,18 @@ export class DiscountPer100Quantity implements DiscountPerQuantity {
             return totaAmmount - (totaAmmount * this.percentOfDiscount);
         }
         return totaAmmount;
+    }
+}
+
+export class DisocuntPerWeekend implements DiscountStrategy {
+
+    percentOfDiscount: number;
+
+    constructor(percentOfDisocunt: number) {
+        this.percentOfDiscount = percentOfDisocunt
+    }
+
+    execDiscount(totaAmmount: number): number {
+        return totaAmmount - (totaAmmount * this.percentOfDiscount)
     }
 }
