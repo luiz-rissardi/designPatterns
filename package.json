@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon ./dist/strategy/index.js",
+    "s": "nodemon ./dist/composite/example2/index.js",
     "t":"tsc --project ."
   },
   "author": "",
