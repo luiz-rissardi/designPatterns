@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon ./dist/composite/example2/index.js",
-    "t":"tsc --project ."
+    "s": "nodemon ./dist/builder/example2/index.js",
+    "t": "tsc --project ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.19.2",
     "nodemon": "^3.1.0"
   },
   "devDependencies": {
