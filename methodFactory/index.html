@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Record and Play Audio in JavaScript</title>
+</head>
+
+<body style="background-color:rgb(101, 185, 17); ">
+    <header>
+        <h1>Record and Play Audio in JavaScript</h1>
+    </header>
+    <!--button for 'start recording'-->
+    <p>
+        <button id="btnStart">START RECORDING</button>
+        <button id="btnStop">STOP RECORDING</button>
+        <!--button for 'stop recording'-->
+
+        <fieldset>
+            <label for="file">
+                insira um arquivo
+            </label>
+            <input type="file" id="file">
+            <button class="btn-send"> enviar arquivo </button>
+        </fieldset>
+        <fieldset>
+            <label for="text">
+                insira um arquivo
+            </label>
+            <input type="text" id="text">
+            <button class="btn-send-text"> enviar texto </button>
+        </fieldset>
+    </p>
+
+    <script defer type="module" src="../dist/methodFactory/index.js">   
+    </script>
+</body>
+
+</html>
