@@ -1,7 +1,7 @@
 padrão de projeto "estratégia" padrão de <strong>"projeto comportamental"</strong> 
 
 padrão de projeto que visa o desacoplamento das regras de negocio do comportamento/algoritimo
-do siste
+do sistema
 
 diz que temos um contexto de uso aonde pode haver variações no algoritimo 
 que será usado, por exemplo um carrinho de compra aonde tme várias promoções.

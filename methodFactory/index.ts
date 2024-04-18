@@ -1,17 +1,23 @@
-import { MessageMidia, MessageAudio,MessageText } from "./messages.js";
+import { MessageMidia, MessageAudio, MessageText } from "./messages.js";
 
 const recognition = new SpeechSynthesisUtterance("I AM THE ROCK");
 recognition.lang = "en-US"
 
+
 async function startListening() {
-    const data: HTMLInputElement = document.getElementById("file") as HTMLInputElement;
-    const file = data.files[0]
+    const data = document.getElementById("file") as HTMLInputElement;
+    const file = data.files[0];
     const message = new MessageMidia(file, new Date(), 99553247336);
     const teste = await message.sendMessage();
-    console.log(teste);
+    const img = document.createElement("img");
+    img.src = teste;
+    document.getElementsByTagName("body")[0].appendChild(img);
+    // img.onload = function () {
+    //     URL.revokeObjectURL(teste); // Revoga a URL após a imagem ser carregada
+    // };
 
-    // window.speechSynthesis.speak(recognition)
 }
+
 async function sendTextMessage() {
     const data = document.getElementById("text")?.value;
     const message = await new MessageText(data, new Date(), 99662537323).sendMessage();
@@ -22,13 +28,14 @@ document.getElementById("btn-send").addEventListener("click", startListening);
 document.getElementById("btn-send-text").addEventListener("click", sendTextMessage);
 
 async function sendAudio() {
-    let audioIN = { audio: true };
-    navigator.mediaDevices.getUserMedia(audioIN)
+    let audioIN = { video: true };
+    navigator.mediaDevices.getUserMedia({ audio: true })
         .then(function (mediaStreamObj) {
             let start = document.getElementById('btnStart');
             let stop = document.getElementById('btnStop');
             let mediaRecorder = new MediaRecorder(mediaStreamObj);
             let dataArray = [];
+
 
             // Start event
             start.addEventListener('click', function () {

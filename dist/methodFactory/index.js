@@ -6,8 +6,12 @@ async function startListening() {
     const file = data.files[0];
     const message = new MessageMidia(file, new Date(), 99553247336);
     const teste = await message.sendMessage();
-    console.log(teste);
-    // window.speechSynthesis.speak(recognition)
+    const img = document.createElement("img");
+    img.src = teste;
+    document.getElementsByTagName("body")[0].appendChild(img);
+    // img.onload = function () {
+    //     URL.revokeObjectURL(teste); // Revoga a URL após a imagem ser carregada
+    // };
 }
 async function sendTextMessage() {
     const data = document.getElementById("text")?.value;
@@ -17,8 +21,8 @@ async function sendTextMessage() {
 document.getElementById("btn-send").addEventListener("click", startListening);
 document.getElementById("btn-send-text").addEventListener("click", sendTextMessage);
 async function sendAudio() {
-    let audioIN = { audio: true };
-    navigator.mediaDevices.getUserMedia(audioIN)
+    let audioIN = { video: true };
+    navigator.mediaDevices.getUserMedia({ audio: true })
         .then(function (mediaStreamObj) {
         let start = document.getElementById('btnStart');
         let stop = document.getElementById('btnStop');

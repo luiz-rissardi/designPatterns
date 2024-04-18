@@ -41,13 +41,8 @@ export class MessageMidia extends Messeger {
 
     abstractMethod(file: any): Promise<Object> {
         return new Promise((resolve, reject) => {
-            const fileReader = new FileReader();
-            fileReader.onload = (event) => {
-                const fileData = event.target.result;
-                resolve({ fileData, fileName: file.name })
-            }
-
-            fileReader.readAsDataURL(file);
+            const data = URL.createObjectURL(file)
+            resolve(data)
         })
     }
 }
@@ -61,7 +56,6 @@ export class MessageAudio extends Messeger{
         const audioData = new Blob(audio,{
             type:"audio/mp3"
         })
-        console.log(audio);
         return audioData;
     }
 }
