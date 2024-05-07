@@ -6,16 +6,18 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon ./dist/builder/example2/index.js",
+    "s": "nodemon ./dist/domainNotifications/index.js",
     "t": "tsc --project ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "typescript": "^5.4.2"
   }
 }
