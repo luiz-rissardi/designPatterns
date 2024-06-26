@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon ./dist/domainNotifications/index.js",
+    "s": "nodemon ./dist/decorator/index.js",
     "t": "tsc --project ."
   },
   "author": "",
