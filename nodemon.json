@@ -1,0 +1,7 @@
+{
+    "watch": ["command"],
+    "ext": "ts",
+    "ignore": ["command/**/*.spec.ts"],
+    "exec": "node --loader ts-node/esm ./command/api.ts"
+  }
+  
