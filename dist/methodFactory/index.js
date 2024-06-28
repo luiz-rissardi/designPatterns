@@ -1,4 +1,4 @@
-import { MessageMidia, MessageAudio, MessageText } from "./messages.js";
+import { MessageMidia, MessageAudio, MessageText } from "methodFactory/messages.js";
 const recognition = new SpeechSynthesisUtterance("I AM THE ROCK");
 recognition.lang = "en-US";
 async function startListening() {

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon ./dist/decorator/index.js",
+    "s": "nodemon .command/api.ts",
     "t": "tsc --project .",
     "run-ts": "node --loader ts-node/esm ./command/api.ts"
   },
@@ -17,7 +17,8 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "mysql2": "^3.10.1",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
