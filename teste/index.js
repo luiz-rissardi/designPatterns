@@ -11,6 +11,7 @@ btnPlay.addEventListener("click", playGravation)
 btnStart.addEventListener("click", startGravation)
 
 async function startGravation() {
+    new SpeechRecognition()
     dataStreamRecorder.length = 0
     const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     mediaRecorder = new MediaRecorder(stream);

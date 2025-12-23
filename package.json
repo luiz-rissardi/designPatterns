@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "nodemon .command/api.ts",
+    "s": "nodemon composite/example1/index.ts",
     "t": "tsc --project .",
-    "run-ts": "node --loader ts-node/esm ./command/api.ts"
+    "run-ts": "node --loader ts-node/esm ./abstractFactory/client.ts"
   },
   "author": "",
   "license": "ISC",

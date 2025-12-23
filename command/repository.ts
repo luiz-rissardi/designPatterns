@@ -1,7 +1,6 @@
 import { Pool, PoolConnection, createPool } from "mysql2"
 import { randomUUID } from "crypto";
 
-import 'reflect-metadata';
 
 function inject(Service: any) {
     return function (target: any, key: any) {

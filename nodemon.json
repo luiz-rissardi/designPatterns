@@ -1,7 +1,7 @@
 {
-    "watch": ["command"],
+    "watch": ["*"],
     "ext": "ts",
     "ignore": ["command/**/*.spec.ts"],
-    "exec": "node --loader ts-node/esm ./command/api.ts"
+    "exec": "node --loader ts-node/esm composite/example1/index.ts"
   }
   

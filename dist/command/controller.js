@@ -26,7 +26,6 @@ export class UserController {
     async insertUser(req, res) {
         try {
             const { idade, userName, lastName } = req.body;
-            console.log(idade);
             const command = __classPrivateFieldGet(this, _UserController_commands, "f").get("insertUser");
             const user = await command.execute(userName, lastName, idade);
             res.json(user);

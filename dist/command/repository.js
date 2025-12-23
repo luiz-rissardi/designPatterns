@@ -21,7 +21,6 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 var _UserRepository_connection;
 import { createPool } from "mysql2";
 import { randomUUID } from "crypto";
-import 'reflect-metadata';
 function inject(Service) {
     return function (target, key) {
         if (!target[key]) {
@@ -70,7 +69,6 @@ __decorate([
     inject(NotificationsContext),
     __metadata("design:type", NotificationsContext)
 ], User.prototype, "notificationContext", void 0);
-new User("", "", 2);
 export class UserRepository {
     constructor() {
         _UserRepository_connection.set(this, void 0);

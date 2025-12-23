@@ -1,9 +1,20 @@
 import { User, UserRepository } from "./repository.js";
 
 
+function inject(Service: any) {
+    return function (target: any, key: any) {
+        if (!target[key]) {
+            target[key] = new Service();
+        }
+
+    }
+}
+
 
 export class UserService {
-    constructor(private repository: UserRepository) { }
+
+    @inject(UserRepository)
+    private repository: UserRepository
 
     async findAll() {
         const result = await this.repository.findAll();

@@ -36,5 +36,5 @@ const productList = new ProductList();
 productList.add(product1);
 productList.add(product2);
 productList.add(product3);
-console.log(productList.getTotalPriceOfList());
+console.log(product1);
 export {};

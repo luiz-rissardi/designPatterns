@@ -1,11 +1,12 @@
 // nesse primeiro exemplo veremos a composição de proutos em uma lista 
+
 class Product {
     price: number;
     name: string;
     quantity: number;
-    id: number;
+    id: number
 
-    constructor(price: number,quantity:number, name:string){
+    constructor(price: number, quantity: number, name: string) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
@@ -18,17 +19,17 @@ class Product {
 }
 
 class ProductList {
-    productList: Map<number,Product> = new Map();
+    productList: Map<number, Product> = new Map();
 
-    add(product: Product){
-        this.productList.set(product.id,product);
+    add(product: Product) {
+        this.productList.set(product.id, product);
     }
 
-    remove(product: Product){
+    remove(product: Product) {
         this.productList.delete(product.id);
     }
 
-    getTotalPriceOfList(){
+    getTotalPriceOfList() {
         let totalPrice = 0;
         this.productList.forEach(product => {
             totalPrice += product.findTotalPrice();
@@ -38,13 +39,13 @@ class ProductList {
 }
 
 // a relação dele é de somente 1 lista pra varias produtos
-const product1 = new Product(30,3,"cachorro quente");
-const product2 = new Product(10.20,3,"quentão");
-const product3 = new Product(4.50,3,"coxinha");
+const product1 = new Product(30, 3, "cachorro quente");
+const product2 = new Product(10.20, 3, "quentão");
+const product3 = new Product(4.50, 3, "coxinha");
 
 const productList = new ProductList();
 productList.add(product1)
 productList.add(product2)
 productList.add(product3)
 
-console.log(productList.getTotalPriceOfList());
+console.log(product1);
